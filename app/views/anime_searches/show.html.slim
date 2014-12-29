@@ -1,0 +1,14 @@
+.container
+  h1 Hello inside show
+   
+
+  - @anime.each do |a|
+   h5 = a.title
+   - a.images.each do |i|
+     = image_tag i.src
+   ul
+     li
+      - a.genres.each do |g|
+        = g.name 
+        = ' / '
+   hr

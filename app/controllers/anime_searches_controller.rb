@@ -9,11 +9,15 @@ class AnimeSearchesController < ApplicationController
 	end
 
 	def new
-		@anime_search = AnimeSearch.new
 
 		# @anime_search = AnimeSearch.all
 		@genres = Genre.all
 
+	end
+
+	def show
+		@genre = Genre.find(params[:genre_id])
+		@anime = @genre.anime
 	end
 
 	def create

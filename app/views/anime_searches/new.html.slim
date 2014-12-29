@@ -1,14 +1,9 @@
-= simple_form_for @anime_search do |f|
-		= f.input :search_query
-		= f.button :submit
+.container 
 
-/ Navigation tab
-'Categories
-- @genres ||= []
-ul
-- @genres.each do |g|
-  li
-    = link_to g.name
-
-
-    rails g model user f_name:string l_name:string email:string 
+  / Navigation tab
+  'Categories
+  - @genres ||= []
+  ul
+  - @genres.each do |g|
+    li
+      = link_to g.name, :controller => 'anime_searches', :genre_id => g.id, :action => 'show'

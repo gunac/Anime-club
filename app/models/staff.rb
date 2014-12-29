@@ -1,3 +1,3 @@
 class Staff < ActiveRecord::Base
-	belongs_to :staff
+	belongs_to :anime
 end

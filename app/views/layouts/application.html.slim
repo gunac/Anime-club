@@ -1,9 +1,15 @@
+
 doctype html
 html
-	head
-	  title AnimeClub
-	  = stylesheet_link_tag 'application', media: 'all'
-	  = csrf_meta_tags
-	
-	body
-		= yield
+  .container
+  	head
+  	  title AnimeClub
+  	  = stylesheet_link_tag 'application', media: 'all'
+  	  = csrf_meta_tags
+  	
+  	body
+      = simple_form_for AnimeSearch.new do |f|
+        = f.input :search_query
+        = f.button :submit
+        		
+      = yield

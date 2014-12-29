@@ -1,4 +1,4 @@
-ActiveAdmin.register Anime do
+ActiveAdmin.register AnimeGenre do
 
 
   # See permitted parameters documentation:
@@ -13,9 +13,6 @@ ActiveAdmin.register Anime do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-  
-  permit_params :title, :alt_title, :synopsis, :ann_rating, :ann_id, :episodes, :created_at , :updated_at
- 
 
-
+  permit_params :anime_id, :genre_id
 end
