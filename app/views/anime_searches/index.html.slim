@@ -1,0 +1,10 @@
+= simple_form_for @anime_search do |f|
+		= f.input :search_query
+		= f.button :submit
+
+/ Navigation tab
+- genres ||= []
+ul
+- genres.each do |g|
+  li
+    =g.name

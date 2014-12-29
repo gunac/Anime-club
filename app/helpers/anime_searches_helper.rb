@@ -1,0 +1,2 @@
+module AnimeSearchesHelper
+end
